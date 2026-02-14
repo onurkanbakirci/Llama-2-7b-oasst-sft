@@ -12,6 +12,45 @@ tags:
 base_model: meta-llama/Llama-2-7b-hf
 datasets:
 - OpenAssistant/oasst1
+pipeline_tag: text-generation
+widget:
+- text: |
+    ### User:
+    What is the capital of France?
+    
+    ### Assistant:
+  example_title: "Simple Question"
+- text: |
+    ### User:
+    Explain quantum computing in simple terms.
+    
+    ### Assistant:
+  example_title: "Explanation Request"
+- text: |
+    ### User:
+    Write a Python function to calculate factorial.
+    
+    ### Assistant:
+  example_title: "Code Generation"
+- text: |
+    ### User:
+    Can you help me plan a trip to Japan?
+    
+    ### Assistant:
+  example_title: "Travel Planning"
+- text: |
+    ### User:
+    What are the benefits of regular exercise?
+    
+    ### Assistant:
+  example_title: "Health Advice"
+inference:
+  parameters:
+    max_new_tokens: 200
+    temperature: 0.7
+    top_p: 0.9
+    do_sample: true
+    repetition_penalty: 1.1
 ---
 
 # Llama-2-7b Fine-tuned on OpenAssistant
@@ -199,7 +238,7 @@ The training code and methodology are provided for educational purposes.
 
 ## Model Card Authors
 
-Onur Kanbakirci
+onurkanbkrc
 
 ## Model Card Contact
 
